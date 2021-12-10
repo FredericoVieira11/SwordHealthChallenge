@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/listDogsFragment"
-        android:name="com.example.swordhealthchallenge.ui.listDogs.ListDogsFragment"
+        android:name="com.example.swordhealthchallenge.ui.listBreeds.BreedsListFragment"
         android:label="fragment_list_dogs"
-        tools:layout="@layout/fragment_list_dogs" />
+        tools:layout="@layout/fragment_breeds_list" />
     <fragment
         android:id="@+id/searchDogsFragment"
-        android:name="com.example.swordhealthchallenge.ui.searchDogs.SearchDogsFragment"
+        android:name="com.example.swordhealthchallenge.ui.searchForBreeds.SearchForBreedsFragment"
         android:label="SearchDogsFragment"
-        tools:layout="@layout/fragment_search_dogs"/>
+        tools:layout="@layout/fragment_search_for_breeds"/>
 </navigation>

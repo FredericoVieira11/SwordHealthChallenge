@@ -3,7 +3,7 @@
     <item
         android:id="@+id/listDogsFragment"
         android:icon="@drawable/ic_launcher_background"
-        android:title="@string/dogs"/>
+        android:title="@string/breeds"/>
 
     <item
         android:id="@+id/searchDogsFragment"
