@@ -2,6 +2,9 @@
     <string name="app_name">SwordHealthChallenge</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="dogs">DOGS</string>
+    <string name="breeds">BREEDS</string>
     <string name="search">SEARCH</string>
+    <string name="linear_layout">Linear Layout</string>
+    <string name="grid_layout">Grid Layout</string>
+    <string name="something_went_wrong">Something went wrong</string>
 </resources>
