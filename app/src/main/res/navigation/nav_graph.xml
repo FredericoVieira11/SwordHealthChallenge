@@ -7,12 +7,28 @@
 
     <fragment
         android:id="@+id/listDogsFragment"
-        android:name="com.example.swordhealthchallenge.ui.listBreeds.BreedsListFragment"
+        android:name="com.example.swordhealthchallenge.ui.breedsList.BreedsListFragment"
         android:label="fragment_list_dogs"
-        tools:layout="@layout/fragment_breeds_list" />
+        tools:layout="@layout/fragment_breeds_list" >
+        <action
+            android:id="@+id/action_listDogsFragment_to_breedDetailFragment"
+            app:destination="@id/breedDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchDogsFragment"
         android:name="com.example.swordhealthchallenge.ui.searchForBreeds.SearchForBreedsFragment"
         android:label="SearchDogsFragment"
         tools:layout="@layout/fragment_search_for_breeds"/>
+    <fragment
+        android:id="@+id/breedDetailFragment"
+        android:name="com.example.swordhealthchallenge.ui.breedDetail.BreedDetailsFragment"
+        android:label="BreedDetailFragment"
+        tools:layout="@layout/fragment_breed_details">
+        <action
+            android:id="@+id/action_breedDetailFragment_to_listDogsFragment"
+            app:destination="@id/listDogsFragment" />
+        <argument
+            android:name="passing_name"
+            app:argType="string" />
+    </fragment>
 </navigation>

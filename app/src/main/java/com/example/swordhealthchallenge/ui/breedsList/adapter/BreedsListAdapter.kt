@@ -1,4 +1,4 @@
-package com.example.swordhealthchallenge.ui.listBreeds.adapter
+package com.example.swordhealthchallenge.ui.breedsList.adapter
 
 import android.content.Context
 import android.graphics.Color
@@ -6,20 +6,23 @@ import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
-import com.bumptech.glide.request.RequestOptions
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.bumptech.glide.request.target.Target
 import com.example.swordhealthchallenge.R
 import com.example.swordhealthchallenge.databinding.BreedItemPreviewBinding
 import com.example.swordhealthchallenge.network.model.BreedModel
+import com.example.swordhealthchallenge.ui.breedsList.BreedsListFragmentDirections
 
 class BreedsListAdapter(
     private val list: MutableList<BreedModel>,
-    private val context: Context
+    private val context: Context,
+    private val fragment: Fragment
 ): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -30,6 +33,13 @@ class BreedsListAdapter(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         (holder as BreedsListViewHolder).bind(this.list[position], this.context)
+
+        holder.itemView.setOnClickListener {
+            val name = this.list[position].name
+
+            val action = BreedsListFragmentDirections.actionListDogsFragmentToBreedDetailFragment(name)
+            findNavController(this.fragment).navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {

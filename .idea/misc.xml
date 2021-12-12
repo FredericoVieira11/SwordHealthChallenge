@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/FSV/code/SwordHealthChallenge/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/FSV/code/SwordHealthChallenge/app/src/main/res/layout/breed_item_preview.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/FSV/code/SwordHealthChallenge/app/src/main/res/layout/fragment_breed_detail.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/FSV/code/SwordHealthChallenge/app/src/main/res/layout/fragment_breed_details.xml" value="0.36574074074074076" />
         <entry key="..\:/Users/FSV/code/SwordHealthChallenge/app/src/main/res/layout/fragment_breeds_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/FSV/code/SwordHealthChallenge/app/src/main/res/layout/fragment_list_dogs.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/FSV/code/SwordHealthChallenge/app/src/main/res/layout/fragment_search_dogs.xml" value="0.25416666666666665" />

@@ -6,13 +6,13 @@
     <data>
         <variable
             name="funtion"
-            type="com.example.swordhealthchallenge.ui.listBreeds.BreedsListFragment" />
+            type="com.example.swordhealthchallenge.ui.breedsList.BreedsListFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.listBreeds.BreedsListFragment">
+        tools:context=".ui.breedsList.BreedsListFragment">
 
 
         <androidx.recyclerview.widget.RecyclerView
