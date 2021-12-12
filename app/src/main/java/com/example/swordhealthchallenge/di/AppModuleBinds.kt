@@ -2,8 +2,10 @@ package com.example.swordhealthchallenge.di
 
 import com.example.swordhealthchallenge.network.dataSource.RemoteDataSource
 import com.example.swordhealthchallenge.network.dataSource.RemoteDataSourceImpl
-import com.example.swordhealthchallenge.network.repository.BreedRepository
-import com.example.swordhealthchallenge.network.repository.BreedRepositoryImpl
+import com.example.swordhealthchallenge.network.repository.breedsListRepository.BreedsListRepository
+import com.example.swordhealthchallenge.network.repository.breedsListRepository.BreedsListRepositoryImpl
+import com.example.swordhealthchallenge.network.repository.breedDetailRepository.BreedDetailRepository
+import com.example.swordhealthchallenge.network.repository.breedDetailRepository.BreedDetailRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -17,6 +19,9 @@ abstract class AppModuleBinds {
     abstract fun bindRemoteDataSource(remoteDataSource: RemoteDataSourceImpl): RemoteDataSource
 
     @Binds
-    abstract fun bindBreedRepository(repositoryImpl: BreedRepositoryImpl): BreedRepository
+    abstract fun bindBreedsListRepository(repositoryImpl: BreedsListRepositoryImpl): BreedsListRepository
+
+    @Binds
+    abstract fun bindBreedDetailRepository(repositoryImpl: BreedDetailRepositoryImpl): BreedDetailRepository
 
 }

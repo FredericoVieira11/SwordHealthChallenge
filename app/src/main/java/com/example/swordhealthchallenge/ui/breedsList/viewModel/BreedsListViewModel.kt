@@ -1,8 +1,10 @@
-package com.example.swordhealthchallenge.ui.listBreeds.viewModel
+package com.example.swordhealthchallenge.ui.breedsList.viewModel
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
-import com.example.swordhealthchallenge.network.repository.BreedRepository
+import com.example.swordhealthchallenge.R
+import com.example.swordhealthchallenge.network.repository.breedsListRepository.BreedsListRepository
 import com.example.swordhealthchallenge.network.resource.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -11,13 +13,13 @@ import javax.inject.Inject
 
 @HiltViewModel
 class BreedsListViewModel  @Inject constructor(
-    private val repository: BreedRepository
+    private val repository: BreedsListRepository
 ): ViewModel(){
 
-    fun getBreeds() = liveData(Dispatchers.IO) {
+    fun getBreeds(context: Context) = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
-            emit(Resource.success(data = repository.getBreeds("2ae864f4-bb75-4588-8700-672169eb4ac2")))
+            emit(Resource.success(data = repository.getBreeds(context.getString(R.string.token))))
         } catch (e: Exception) {
             emit(Resource.error(data = null, message = e.message ?: "Error occurred"))
         }
