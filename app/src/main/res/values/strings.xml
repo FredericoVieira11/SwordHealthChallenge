@@ -1,7 +1,19 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
     <string name="app_name">SwordHealthChallenge</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="dogs">DOGS</string>
+    <string name="breeds">BREEDS</string>
     <string name="search">SEARCH</string>
+    <string name="linear_layout">Linear Layout</string>
+    <string name="grid_layout">Grid Layout</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="token">2ae864f4-bb75-4588-8700-672169eb4ac2</string>
+    <string name="empty_value">empty</string>
+    <string name="breed_details_name">Name:</string>
+    <string name="breed_details_category">Category:</string>
+    <string name="breed_details_origin">Origin:</string>
+    <string name="breed_details_temperament">Temperament:</string>
+    <string name="breed_details_group">Group:</string>
+    <string name="none">none</string>
+    <string name="insert_breed">Insert Breed</string>
 </resources>
