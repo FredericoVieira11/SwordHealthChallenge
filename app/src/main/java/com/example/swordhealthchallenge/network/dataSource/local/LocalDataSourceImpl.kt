@@ -10,5 +10,7 @@ class LocalDataSourceImpl @Inject constructor(
     override suspend fun setBreedsList(breedsList: List<BreedEntity>?) = this.database.setBreedsList(breedsList)
     override fun getBreedsList(): List<BreedEntity> = this.database.getBreedsList()
 
+    override fun searchForBreed(name: String?): List<BreedEntity> = this.database.searchForBreed(name)
+
     override fun deleteBreedsList(breedsList: List<BreedEntity>) = this.database.deleteBreedsList(breedsList)
 }
