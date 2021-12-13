@@ -37,8 +37,14 @@ class BreedsListAdapter(
         holder.itemView.setOnClickListener {
             val name = this.list[position].name
 
-            val action = BreedsListFragmentDirections.actionListDogsFragmentToBreedDetailFragment(name)
-            findNavController(this.fragment).navigate(action)
+            val action = name?.let { it1 ->
+                BreedsListFragmentDirections.actionListDogsFragmentToBreedDetailFragment(
+                    it1
+                )
+            }
+            if (action != null) {
+                findNavController(this.fragment).navigate(action)
+            }
         }
     }
 

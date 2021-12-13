@@ -1,4 +1,4 @@
-package com.example.swordhealthchallenge.network.dataSource
+package com.example.swordhealthchallenge.network.dataSource.remote
 
 import com.example.swordhealthchallenge.network.ApiService
 import com.example.swordhealthchallenge.network.response.BreedDetailsResponse

@@ -1,6 +1,6 @@
 package com.example.swordhealthchallenge.network.repository.breedDetailRepository
 
-import com.example.swordhealthchallenge.network.dataSource.RemoteDataSource
+import com.example.swordhealthchallenge.network.dataSource.remote.RemoteDataSource
 import com.example.swordhealthchallenge.network.model.BreedDetailsModel
 import javax.inject.Inject
 
