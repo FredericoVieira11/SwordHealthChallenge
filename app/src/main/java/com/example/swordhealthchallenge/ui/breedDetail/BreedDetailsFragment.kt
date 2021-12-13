@@ -39,6 +39,7 @@ class BreedDetailsFragment : Fragment() {
                 when (resource.status) {
                     Status.SUCCESS -> {
                         hideProgressBar()
+                        showBreedDetailsElements()
                         this.binding.breedDetailNameTxt.text = if (it.data?.get(0)?.name == null || it.data[0].name.equals("")) getString(R.string.empty_value) else it.data[0].name
                         this.binding.breedDetailCategoryTxt.text = getString(R.string.none)
                         this.binding.breedDetailOriginTxt.text = if (it.data?.get(0)?.origin == null || it.data[0].origin.equals("")) getString(R.string.empty_value) else it.data[0].origin
@@ -46,10 +47,12 @@ class BreedDetailsFragment : Fragment() {
                     }
                     Status.ERROR -> {
                         hideProgressBar()
+                        hideBreedDetailsElements()
                         Toast.makeText(requireContext(), getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show()
                     }
                     Status.LOADING -> {
                         showProgressBar()
+                        hideBreedDetailsElements()
                     }
                 }
             }
@@ -62,6 +65,14 @@ class BreedDetailsFragment : Fragment() {
 
     private fun hideProgressBar() {
         (requireActivity() as MainActivity).hideProgressBar()
+    }
+
+    private fun showBreedDetailsElements() {
+        this.binding.cdBreedDetails.visibility = View.VISIBLE
+    }
+
+    private fun hideBreedDetailsElements() {
+        this.binding.cdBreedDetails.visibility = View.GONE
     }
 
 }
