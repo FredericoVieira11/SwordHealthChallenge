@@ -18,7 +18,11 @@
         android:id="@+id/searchDogsFragment"
         android:name="com.example.swordhealthchallenge.ui.searchForBreeds.SearchForBreedsFragment"
         android:label="SearchDogsFragment"
-        tools:layout="@layout/fragment_search_for_breeds"/>
+        tools:layout="@layout/fragment_search_for_breeds">
+        <action
+            android:id="@+id/action_searchDogsFragment_to_breedDetailFragment"
+            app:destination="@id/breedDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/breedDetailFragment"
         android:name="com.example.swordhealthchallenge.ui.breedDetail.BreedDetailsFragment"
@@ -30,5 +34,8 @@
         <argument
             android:name="passing_name"
             app:argType="string" />
+        <action
+            android:id="@+id/action_breedDetailFragment_to_searchDogsFragment"
+            app:destination="@id/searchDogsFragment" />
     </fragment>
 </navigation>

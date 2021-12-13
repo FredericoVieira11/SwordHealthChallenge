@@ -40,7 +40,7 @@ class BreedDetailsFragment : Fragment() {
                     Status.SUCCESS -> {
                         hideProgressBar()
                         this.binding.breedDetailNameTxt.text = if (it.data?.get(0)?.name == null || it.data[0].name.equals("")) getString(R.string.empty_value) else it.data[0].name
-                        this.binding.breedDetailCategoryTxt.text = if (it.data?.get(0)?.category == null || it.data[0].category.equals("")) getString(R.string.empty_value) else it.data[0].category
+                        this.binding.breedDetailCategoryTxt.text = getString(R.string.none)
                         this.binding.breedDetailOriginTxt.text = if (it.data?.get(0)?.origin == null || it.data[0].origin.equals("")) getString(R.string.empty_value) else it.data[0].origin
                         this.binding.breedDetailTemperamentTxt.text = if (it.data?.get(0)?.temperament == null || it.data[0].temperament.equals("")) getString(R.string.empty_value) else it.data[0].temperament
                     }

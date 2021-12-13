@@ -13,4 +13,7 @@
     <string name="breed_details_category">Category:</string>
     <string name="breed_details_origin">Origin:</string>
     <string name="breed_details_temperament">Temperament:</string>
+    <string name="breed_details_group">Group:</string>
+    <string name="none">none</string>
+    <string name="insert_breed">Insert Breed</string>
 </resources>
