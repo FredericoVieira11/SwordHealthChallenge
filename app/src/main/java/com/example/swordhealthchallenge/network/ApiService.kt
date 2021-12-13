@@ -1,6 +1,5 @@
 package com.example.swordhealthchallenge.network
 
-import com.example.swordhealthchallenge.network.response.BreedDetailsResponse
 import com.example.swordhealthchallenge.network.response.BreedResponse
 import retrofit2.Response
 import retrofit2.http.GET
@@ -18,6 +17,6 @@ interface ApiService {
     suspend fun getBreedDetails(
         @Header("x-api-key") token: String,
         @Query("name") name: String
-    ): Response<List<BreedDetailsResponse>>
+    ): Response<List<BreedResponse>>
 
 }

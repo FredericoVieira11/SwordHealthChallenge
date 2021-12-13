@@ -25,14 +25,15 @@ class BreedDetailRepositoryImpl @Inject constructor(
                 )
             }
         } else {
-            getBreedDetails(name)
+            getLocalBreedDetails(name)
         }
     }
 
-    private fun getBreedDetails(name: String): List<BreedDetailsModel> {
+    private fun getLocalBreedDetails(name: String): List<BreedDetailsModel> {
         return this.localDataSource.searchForBreed(name).map {
             BreedDetailsModel(
                 it.name,
+                it.group,
                 it.origin,
                 it.temperament,
             )

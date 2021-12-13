@@ -26,8 +26,6 @@ class BreedsListRepositoryImpl @Inject constructor(
                 BreedModel(
                     it.id,
                     it.name,
-                    it.origin,
-                    it.temperament,
                     ImageModel(
                         it.image.url
                     )
@@ -45,6 +43,7 @@ class BreedsListRepositoryImpl @Inject constructor(
                 BreedEntity(
                     id = it.id,
                     name = it.name,
+                    group = it.group,
                     origin = it.origin,
                     temperament = it.temperament,
                     image = it.image.url
@@ -60,8 +59,6 @@ class BreedsListRepositoryImpl @Inject constructor(
             BreedModel(
                 it.id,
                 it.name,
-                it.origin,
-                it.temperament,
                 ImageModel(
                     it.image
                 )

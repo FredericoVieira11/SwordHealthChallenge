@@ -13,6 +13,9 @@ data class BreedEntity (
     @ColumnInfo(name = "name")
     var name: String?,
 
+    @ColumnInfo(name = "group")
+    var group: String?,
+
     @ColumnInfo(name = "origin")
     var origin: String?,
 
