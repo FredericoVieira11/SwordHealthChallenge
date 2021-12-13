@@ -6,5 +6,7 @@ interface LocalDataSource {
     suspend fun setBreedsList(breedsList: List<BreedEntity>?)
     fun getBreedsList(): List<BreedEntity>
 
+    fun searchForBreed(name: String?): List<BreedEntity>
+
     fun deleteBreedsList(breedsList: List<BreedEntity>)
 }

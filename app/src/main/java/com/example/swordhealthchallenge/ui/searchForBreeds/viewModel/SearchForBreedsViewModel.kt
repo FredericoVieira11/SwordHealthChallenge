@@ -19,7 +19,7 @@ class SearchForBreedsViewModel @Inject constructor(
     fun getBreedDetails(context: Context, name: String) = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
-            emit(Resource.success(data = repository.getBreedDetails(context.getString(R.string.token), name)))
+            emit(Resource.success(data = repository.getBreedDetails(context.getString(R.string.token), name, context)))
         } catch (e: Exception) {
             emit(Resource.error(data = null, message = e.message ?: "Error occurred"))
         }
