@@ -10,7 +10,7 @@ interface DatabaseDao {
     @Query("SELECT * FROM breed ")
     fun getBreedsList(): List<BreedEntity>
 
-    @Query("SELECT * FROM breed WHERE name LIKE :name")
+    @Query("SELECT * FROM breed WHERE name LIKE '%' || :name || '%'")
     fun searchForBreed(name: String?): List<BreedEntity>
 
     @Delete
