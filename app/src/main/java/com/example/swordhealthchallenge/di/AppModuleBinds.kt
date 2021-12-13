@@ -1,7 +1,9 @@
 package com.example.swordhealthchallenge.di
 
-import com.example.swordhealthchallenge.network.dataSource.RemoteDataSource
-import com.example.swordhealthchallenge.network.dataSource.RemoteDataSourceImpl
+import com.example.swordhealthchallenge.network.dataSource.local.LocalDataSource
+import com.example.swordhealthchallenge.network.dataSource.local.LocalDataSourceImpl
+import com.example.swordhealthchallenge.network.dataSource.remote.RemoteDataSource
+import com.example.swordhealthchallenge.network.dataSource.remote.RemoteDataSourceImpl
 import com.example.swordhealthchallenge.network.repository.breedsListRepository.BreedsListRepository
 import com.example.swordhealthchallenge.network.repository.breedsListRepository.BreedsListRepositoryImpl
 import com.example.swordhealthchallenge.network.repository.breedDetailRepository.BreedDetailRepository
@@ -14,6 +16,9 @@ import dagger.hilt.components.SingletonComponent
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class AppModuleBinds {
+
+    @Binds
+    abstract fun bindLocalDataSource(localDataSource: LocalDataSourceImpl): LocalDataSource
 
     @Binds
     abstract fun bindRemoteDataSource(remoteDataSource: RemoteDataSourceImpl): RemoteDataSource

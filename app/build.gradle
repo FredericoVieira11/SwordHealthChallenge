@@ -88,4 +88,10 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation "com.squareup.retrofit2:retrofit:$retrofit_config"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_config"
+
+    //Room
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"
 }

@@ -19,7 +19,7 @@ class BreedsListViewModel  @Inject constructor(
     fun getBreeds(context: Context) = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
-            emit(Resource.success(data = repository.getBreeds(context.getString(R.string.token))))
+            emit(Resource.success(data = repository.getBreeds(context.getString(R.string.token), context)))
         } catch (e: Exception) {
             emit(Resource.error(data = null, message = e.message ?: "Error occurred"))
         }
