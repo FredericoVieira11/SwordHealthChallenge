@@ -14,7 +14,7 @@ class BreedDetailRepositoryImpl @Inject constructor(
         ).body()?.map {
             BreedDetailsModel(
                 it.name,
-                it.category,
+                it.group,
                 it.origin,
                 it.temperament
             )
