@@ -1,7 +1,6 @@
 package com.example.swordhealthchallenge.network.dataSource.remote
 
 import com.example.swordhealthchallenge.network.ApiService
-import com.example.swordhealthchallenge.network.response.BreedDetailsResponse
 import com.example.swordhealthchallenge.network.response.BreedResponse
 import retrofit2.Response
 import javax.inject.Inject
@@ -17,5 +16,5 @@ class RemoteDataSourceImpl @Inject constructor(
     override suspend fun getBreedDetails(
         token: String,
         name: String
-    ): Response<List<BreedDetailsResponse>> = this.apiService.getBreedDetails(token = token, name = name)
+    ): Response<List<BreedResponse>> = this.apiService.getBreedDetails(token = token, name = name)
 }
